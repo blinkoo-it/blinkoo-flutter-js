@@ -1,5 +1,5 @@
 export interface BlinkooFeedInterface {
-  init(): Promise<void>;
+  init(assetsPath?: string): Promise<void>;
   open(element: HTMLElement, params: BlinkooFeedParams): void;
   close(): void;
   _app?: any;
