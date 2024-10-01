@@ -105366,7 +105366,7 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "1053463336";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "874195139";
 
     _flutter.loader.load({
       onEntrypointLoaded: async function onEntrypointLoaded(engineInitializer) {
@@ -105389,7 +105389,9 @@ BlinkooFeed.open = (element, params) => {
 };
 
 BlinkooFeed.close = () => {
-  let viewConfig = BlinkooFeed._app.removeView(BlinkooFeed._viewId);
+  if (BlinkooFeed._viewId) {
+    let viewConfig = BlinkooFeed._app.removeView(BlinkooFeed._viewId);
+  }
 };
 
 export { BlinkooFeed };
