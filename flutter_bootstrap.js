@@ -1,11 +1,11 @@
 var BlinkooFeed = {
-  _addScriptTag: (src) => this._addScriptTag(
+  _addScriptTag: (src) => BlinkooFeed._addTag(
     "script",
     {src: src, defer: true},
     document.getElementsByTagName("body")[0],
   ),
 
-  _addBaseTag: (href) => this._addScriptTag(
+  _addBaseTag: (href) => BlinkooFeed._addTag(
     "base",
     {href: href},
     document.getElementsByTagName("head")[0],
@@ -17,13 +17,13 @@ var BlinkooFeed = {
       element[prop] = properties[prop];
     });
     // append element
-    parentNode.appendChild(script);
+    parentNode.appendChild(element);
   }
 };
 
 BlinkooFeed.init = (assetsPath) => {
   if (assetsPath?.length > 0) {
-    this._addBaseTag(assetsPath);
+    BlinkooFeed._addBaseTag(assetsPath);
   }
 
   return new Promise((resolver) => {
@@ -105384,7 +105384,7 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "1539993763";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "3336818596";
 
     _flutter.loader.load({
       onEntrypointLoaded: async function onEntrypointLoaded(engineInitializer) {
