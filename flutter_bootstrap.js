@@ -105384,7 +105384,7 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "3336818596";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "1928385027";
 
     _flutter.loader.load({
       onEntrypointLoaded: async function onEntrypointLoaded(engineInitializer) {
@@ -105393,6 +105393,14 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
         });
 
         BlinkooFeed._app = await engine.runApp();
+        // fix mobile browsers
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+          let tags = document.getElementsByTagName("flt-semantics-placeholder");
+          for(let tag of tags) {
+            tag.remove();
+          }
+        }
+        
         resolver();
       },
     });
