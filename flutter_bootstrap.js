@@ -15,7 +15,7 @@ var BlinkooFeed = {
   }
 };
 
-BlinkooFeed.init = () => {
+BlinkooFeed.init = (assetsPath) => {
   return new Promise((resolver) => {
     // add js external dependencies
     BlinkooFeed._addScriptTag(
@@ -105374,11 +105374,13 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "4018490846";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "1655830896";
+    if (assetsPath?.length == 0) assetsPath = undefined;
 
     _flutter.loader.load({
       onEntrypointLoaded: async function onEntrypointLoaded(engineInitializer) {
         let engine = await engineInitializer.initializeEngine({
+          assetBase: assetsPath,
           multiViewEnabled: true, // Enables embedded mode.
         });
 
@@ -105397,12 +105399,9 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
   });
 };
 
-BlinkooFeed.open = (element, params, assetsPath) => {
-  if (assetsPath == null || assetsPath?.length == 0) assetsPath = undefined;
-
+BlinkooFeed.open = (element, params) => {
   BlinkooFeed._viewId = BlinkooFeed._app.addView({
     hostElement: element,
-    assetBase: assetsPath,
     initialData: params,
   });
 };
