@@ -5,12 +5,6 @@ var BlinkooFeed = {
     document.getElementsByTagName("body")[0],
   ),
 
-  _addBaseTag: (href) => BlinkooFeed._addTag(
-    "base",
-    {href: href},
-    document.getElementsByTagName("head")[0],
-  ),
-
   _addTag: (tagName, properties, parentNode) => {
     let element = document.createElement(tagName);
     Object.keys(properties).forEach(prop => {
@@ -21,11 +15,7 @@ var BlinkooFeed = {
   }
 };
 
-BlinkooFeed.init = (assetsPath) => {
-  if (assetsPath?.length > 0) {
-    BlinkooFeed._addBaseTag(assetsPath);
-  }
-
+BlinkooFeed.init = () => {
   return new Promise((resolver) => {
     // add js external dependencies
     BlinkooFeed._addScriptTag(
@@ -105384,7 +105374,7 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "1928385027";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "4018490846";
 
     _flutter.loader.load({
       onEntrypointLoaded: async function onEntrypointLoaded(engineInitializer) {
@@ -105407,9 +105397,12 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
   });
 };
 
-BlinkooFeed.open = (element, params) => {
+BlinkooFeed.open = (element, params, assetsPath) => {
+  if (assetsPath == null || assetsPath?.length == 0) assetsPath = undefined;
+
   BlinkooFeed._viewId = BlinkooFeed._app.addView({
     hostElement: element,
+    assetBase: assetsPath,
     initialData: params,
   });
 };
