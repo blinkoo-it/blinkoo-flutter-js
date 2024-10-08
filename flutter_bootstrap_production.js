@@ -46982,7 +46982,7 @@ while(true)switch(s){case 0:A.d3().$1("LOGGO feedlist new page filtered "+a+" - 
 o=p.OE(null)
 o=o==null?null:B.b.bd(o,",")
 s=4
-return A.J(p.Ka(0,"/api/v1/feed/web/filtered",A.T(["pageNumber",a,"PageSize",10,"Filters",b,"postId",c,"Exclude",o,"ExcludedUsers",null],t.N,t.z)),$async$v_)
+return A.J(p.Ka(0,"/api/feed/web/filtered",A.T(["pageNumber",a,"PageSize",10,"Filters",b,"postId",c,"Exclude",o,"ExcludedUsers",null],t.N,t.z)),$async$v_)
 case 4:s=3
 return A.J(p.tD(e),$async$v_)
 case 3:n=e
@@ -47069,7 +47069,7 @@ var $async$te=A.z(function(k,l){if(k===1)return A.v(l,r)
 while(true)switch(s){case 0:o=h==null?null:h.c
 n=g!=null?A.baf(g,"~1"):"*"
 s=3
-return A.J(p.Ka(0,"/api/v1/feed/web/acs",A.T(["PageNumber",e,"PageSize",10,"Filters",d,"Timestamp",j,"postId",f,"Exclude",b,"ExcludedUsers",c,"Sorting",i.b,"Coordinates",a,"SearchIn",o,"Search",n],t.N,t.z)),$async$te)
+return A.J(p.Ka(0,"/api/feed/web/acs",A.T(["PageNumber",e,"PageSize",10,"Filters",d,"Timestamp",j,"postId",f,"Exclude",b,"ExcludedUsers",c,"Sorting",i.b,"Coordinates",a,"SearchIn",o,"Search",n],t.N,t.z)),$async$te)
 case 3:q=l
 s=1
 break
@@ -48536,7 +48536,7 @@ k=t.WF
 s.v(s,new A.B7(g,new A.lo(A.d7(j,p),o),new A.lo(A.d7(j,n),m),new A.lo(A.d7(j,l),k)))
 g=t.s
 k=new A.Fc(i,f,A.t(t.S,t.nE),A.a([],g),new A.lo(A.d7(j,p),o),new A.lo(A.d7(j,n),m),new A.lo(A.d7(j,l),k))
-k.r=A.a(["/api/v1/feed/web/acs","/api/v1/feed/web/filtered"],g)
+k.r=A.a(["/api/feed/web/acs","/api/feed/web/filtered"],g)
 s.v(s,k)
 q.sFq(h.gTz())
 q.sG_(B.nZ)
@@ -48708,10 +48708,10 @@ A.wV.prototype={}
 A.wX.prototype={}
 A.vA.prototype={$iac0:1,
 gYU(){return"blinkoo - dev"},
-gTz(){return"https://blinkoo-webapi-dev.azurewebsites.net"}}
+gTz(){return"https://customerfeed-dev.azurewebsites.net"}}
 A.vB.prototype={$iac0:1,
 gYU(){return"blinkoo"},
-gTz(){return"https://blinkoo-webapi.azurewebsites.net"}}
+gTz(){return"https://customerfeed.azurewebsites.net"}}
 A.aNs.prototype={
 dk(){var s,r,q=this.a
 q===$&&A.b()
@@ -105374,7 +105374,7 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "116585746";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "3452193787";
     if (assetsPath?.length == 0) assetsPath = undefined;
 
     _flutter.loader.load({
