@@ -105448,10 +105448,13 @@ _flutter.buildConfig = {"engineRevision":"36335019a8eab588c3c2ea783c618d90505be2
     // END BUILD CONFIG
 
     // add timestamp to main.dart.js
-    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "513742301";
+    _flutter.buildConfig["builds"][0]["mainJsPath"] = _flutter.buildConfig["builds"][0]["mainJsPath"] + "?ts=" + "3523244426";
     if (assetsPath?.length == 0) assetsPath = undefined;
 
     _flutter.loader.load({
+      config: {
+        canvasKitBaseUrl: (assetsPath ?? "")+"/canvaskit/"
+      },
       onEntrypointLoaded: async function onEntrypointLoaded(engineInitializer) {
         let engine = await engineInitializer.initializeEngine({
           assetBase: assetsPath,
