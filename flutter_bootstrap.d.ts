@@ -12,5 +12,6 @@ export interface BlinkooFeedParams {
   playlistFilter?: string;
   apiKey: string;
   environment: string;
+  textScaler?: number;
 }
 export declare const BlinkooFeed: BlinkooFeedInterface;
