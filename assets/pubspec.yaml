@@ -95,8 +95,6 @@ flutter:
   # Assets
   assets:
     - assets/svgs/
-    - assets/flags/
-    - assets/animations/
     - assets/translations/
     - pubspec.yaml
 
